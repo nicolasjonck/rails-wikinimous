@@ -1,0 +1,15 @@
+<h1>You articles:</h1>
+<ul>
+  <% @articles.each do |article| %>
+  <h2>
+    <li>
+      <%= link_to article.title, article_path(article)  %>
+    </li>
+  </h2>
+  <p>
+    <li>
+      <%= article.content %>
+    </li>
+  </p>
+  <% end %>
+</ul>
